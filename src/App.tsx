@@ -1,7 +1,7 @@
 import {Flex, Heading} from '@chakra-ui/layout';
 import React from 'react';
 import './App.css';
-import UsernameNotSet from './usernameNotSet';
+import UsernameNotSet from './components/usernameNotSet';
 import LandingPage from "./components/LandingPage"
 
 interface State {
