@@ -1,26 +1,32 @@
+import {Flex, Heading} from '@chakra-ui/layout';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import UsernameNotSet from './usernameNotSet';
+import LandingPage from "./components/LandingPage"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface State {
+	username?: string
 }
 
-export default App;
+export default class App extends React.Component<{}, State> {
+	constructor(props: any) {
+		super(props)
+		this.state = {
+		username: ""
+		}
+	}
+	
+	componentDidMount() {
+		const usernameFromLS = localStorage.getItem("username")
+		this.setState({username: usernameFromLS!})
+	}
+
+	render() {
+  		return (
+  		<>
+		{this.state.username === null ? <UsernameNotSet />: <LandingPage />}
+  		</>
+  		);
+  	}
+}
+
