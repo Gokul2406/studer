@@ -1,5 +1,5 @@
-import {Flex, Heading} from '@chakra-ui/layout';
 import React from 'react';
+import Sidebar from "./components/Sidebar";
 import './App.css';
 import UsernameNotSet from './components/usernameNotSet';
 import LandingPage from "./components/LandingPage"
