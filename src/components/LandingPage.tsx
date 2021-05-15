@@ -1,6 +1,5 @@
 import React from "react";
 import {Flex, Heading, Text, Button, MenuList, Menu, MenuButton} from "@chakra-ui/react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { HamburgerIcon } from "@chakra-ui/icons"
 
 interface IState {
@@ -35,7 +34,6 @@ export default class LandingPage extends React.Component<{}, IState> {
 		<Flex justifyContent="center" alignItems="center">
 		<Flex direction="column">
 			<Heading>Hey {this.state.username} 👋 </Heading>
-<FontAwesomeIcon icon="coffee" />
 		</Flex>
 		</Flex>
 		</>
