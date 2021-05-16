@@ -1,5 +1,5 @@
 import React from "react";
-import {Flex, Heading, Button, MenuList, Menu, MenuButton} from "@chakra-ui/react";
+import {Flex, Heading, Button, MenuList, Menu, MenuButton, MenuItem} from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons"
 import {BrowserRouter as Router, Link, Route} from "react-router-dom"
 import LifeGoals from "./LifeGoals"
@@ -30,14 +30,16 @@ export default class LandingPage extends React.Component<{}, IState> {
 		<Menu>
 			<MenuButton as={Button} leftIcon={<HamburgerIcon />} p={6}>Menu</MenuButton>
 			<MenuList p={6}>
-			<Link to="/todos">
+			<MenuItem>
+			<Link to="/lifegoals">
 			Life Goals
 			</Link>
-			</MenuList>
-			<MenuList p={6}>
+			</MenuItem>
+			<MenuItem>
 			<Link to="/">
 			Home
 			</Link>
+			</MenuItem>
 			</MenuList>
 		</Menu>
 		</Flex>

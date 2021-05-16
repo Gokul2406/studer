@@ -21,6 +21,7 @@ export default class LifeGoals extends React.Component<{}, State> {
 		}
 	}	
 
+
 	handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		this.setState({newLifeGoal: e.target.value})
 	}
@@ -34,6 +35,7 @@ export default class LifeGoals extends React.Component<{}, State> {
 	}
 
 	render() {
+
 		return(
 		<Flex alignItems="center" justifyContent="center" mt={5} direction="column">
 			<Heading>Let's see your Life Goals </Heading>
