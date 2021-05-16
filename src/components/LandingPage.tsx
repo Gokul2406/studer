@@ -2,8 +2,7 @@ import React from "react";
 import {Flex, Heading, Button, MenuList, Menu, MenuButton} from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons"
 import {BrowserRouter as Router, Link, Route} from "react-router-dom"
-import App from "../App";
-import UsernameNotSet from "./usernameNotSet";
+import LifeGoals from "./LifeGoals"
 
 interface IState {
 	username: string
@@ -32,7 +31,7 @@ export default class LandingPage extends React.Component<{}, IState> {
 			<MenuButton as={Button} leftIcon={<HamburgerIcon />} p={6}>Menu</MenuButton>
 			<MenuList p={6}>
 			<Link to="/todos">
-			Todos
+			Life Goals
 			</Link>
 			</MenuList>
 		</Menu>
@@ -42,7 +41,7 @@ export default class LandingPage extends React.Component<{}, IState> {
 			<Heading>Hey {this.state.username} 👋 </Heading>
 		</Flex>
 		</Flex>
-		<Route path="/todos" component={UsernameNotSet} />
+		<Route path="/lifegoals" component={LifeGoals} />
 		</Router>
 		</>
 		)
