@@ -34,6 +34,11 @@ export default class LandingPage extends React.Component<{}, IState> {
 			Life Goals
 			</Link>
 			</MenuList>
+			<MenuList p={6}>
+			<Link to="/">
+			Home
+			</Link>
+			</MenuList>
 		</Menu>
 		</Flex>
 		<Flex justifyContent="center" alignItems="center">
