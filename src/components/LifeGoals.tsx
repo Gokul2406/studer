@@ -39,9 +39,15 @@ export default class LifeGoals extends React.Component<{}, State> {
 	}
 
 
-
+	componentDidMount() {
+		const lgsLifeGoals = localStorage.getItem("lg")
+		const lg = JSON.parse(lgsLifeGoals!)
+		for (let i=0; i < lg.length; i++) {
+			this.state.lifeGoals.push(lg[i])
+		}
+	}
+		
 	
-
 	render() {
 	
 	const lg: any = [];

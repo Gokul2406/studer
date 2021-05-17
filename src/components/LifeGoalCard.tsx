@@ -8,8 +8,8 @@ interface Props {
 
 const LifeGoalCard: React.FC<Props> = ({ lifeGoal }) => {
 	return(
-		<Box p={12}>
-		<Heading mt={2}>{lifeGoal}</Heading>
+		<Box p={12} mt={6}>
+		<Heading mt={1}>{lifeGoal}</Heading>
 		</Box>
 	)
 }
